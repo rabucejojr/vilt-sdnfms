@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Header from '@/Components/Header.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 </script>
@@ -7,7 +8,7 @@ import { Head } from '@inertiajs/vue3';
     <Head title="Dashboard" />
 
     <AuthenticatedLayout>
-        <template #header>
+        <!-- <template #header>
             <h2 class="text-xl font-semibold leading-tight text-gray-800">
                 Dashboard
             </h2>
@@ -19,6 +20,7 @@ import { Head } from '@inertiajs/vue3';
                     <div class="p-6 text-gray-900">You're logged in!</div>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <Header />
     </AuthenticatedLayout>
 </template>

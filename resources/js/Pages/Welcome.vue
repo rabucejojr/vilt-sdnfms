@@ -1,22 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { Head, Link } from '@inertiajs/vue3';
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-defineProps({
-    canLogin: {
-        type: Boolean,
-    },
-    canRegister: {
-        type: Boolean,
-    },
-    laravelVersion: {
-        type: String,
-        required: true,
-    },
-    phpVersion: {
-        type: String,
-        required: true,
-    },
-});
+
+defineProps<{
+    canLogin?: boolean;
+    canRegister?: boolean;
+    laravelVersion: string;
+    phpVersion: string;
+}>();
 
 function handleImageError() {
     document.getElementById('screenshot-container')?.classList.add('!hidden');
@@ -42,9 +33,7 @@ function handleImageError() {
                     class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3"
                 >
                     <div class="flex lg:col-start-2 lg:justify-center">
-                        <ApplicationLogo
-                            class="h-20 w-20 fill-current text-gray-500"
-                        />
+                        <ApplicationLogo class="h-20 w-20 fill-current text-gray-500" />
                     </div>
                     <nav v-if="canLogin" class="-mx-3 flex flex-1 justify-end">
                         <Link

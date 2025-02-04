@@ -21,6 +21,7 @@ const submit = () => {
 
 <template>
     <GuestLayout>
+
         <Head title="Forgot Password" />
 
         <div class="mb-4 text-sm text-gray-600">
@@ -38,11 +39,11 @@ const submit = () => {
 
         <form @submit.prevent="submit">
             <div>
-                <InputLabel for="email" value="Email" />
+                <InputLabel for="email" value="Email/Username" />
 
                 <TextInput
-                    id="email"
-                    type="email"
+                    id="input_type"
+                    type="text"
                     class="mt-1 block w-full"
                     v-model="form.email"
                     required
@@ -63,4 +64,5 @@ const submit = () => {
             </div>
         </form>
     </GuestLayout>
+
 </template>

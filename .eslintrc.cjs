@@ -7,10 +7,11 @@ module.exports = {
         'plugin:vue/vue3-essential',
         'eslint:recommended',
         '@vue/eslint-config-prettier',
+        'plugin:vue/vue3-recommended',
+        '@vue/eslint-config-typescript',
     ],
-    parserOptions: {
-        ecmaVersion: 'latest',
-    },
+    parser: '@typescript-eslint/parser',
+    plugins: ['@typescript-eslint'],
     rules: {
         'vue/multi-word-component-names': 'off',
         'no-undef': 'off',
